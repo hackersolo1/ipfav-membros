@@ -11,20 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(post => {
                 const postCard = document.createElement('div');
                 postCard.classList.add('post-card');
+                postCard.id = post.titulo;
                 postCard.innerHTML = `
                 <div class="post-header">
                     <div class="post-category">Aviso/postagem</div>
+                    <div class="post-date">
+                        <i data-lucide="calendar"></i>
+                        <span>${post.dataPost}</span>
+                    </div>
                 </div>
                 <h3 class="post-title">${post.titulo}</h3>
                 <p class="post-excerpt">${post.conteudo}</p>
                 <div class="post-footer">
                     <div class="post-author">
-                        <span class="post-author">Márcio</span>
+                        <span>${post.autorPost}</span>
                     </div>
                 </div>
                 `
                 document.querySelector('.posts-grid').appendChild(postCard);
                 lucide.createIcons();
+            });
+
+            document.querySelectorAll('.btn-read-more').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const postTitle = e.currentTarget.dataset.title;
+                    console.log(postTitle);
+                });
             });
 
             const postCount = data.length;
@@ -66,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="event-detail">
                             <i data-lucide="map-pin"></i>
-                            <span>Igreja</span>
+                            <span>${evento.local_evento}</span>
                         </div>
                     </div>
                 </div>
