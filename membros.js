@@ -268,4 +268,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const eventsLink = document.querySelector('#eventsLink');
+    const postsLink = document.querySelector('#postsLink');
+    const usersLink = document.querySelector('#usersLink');
+
+    eventsLink.addEventListener('click', () => {
+        const alvo = document.querySelector('#eventos');
+        alvo.scrollIntoView({ behavior: 'smooth' });
+    })
+
+    postsLink.addEventListener('click', () => {
+        const alvo = document.querySelector('#avisos');
+        alvo.scrollIntoView({behavior:'smooth'});
+    })
+
+    usersLink.addEventListener('click', () => {
+        const alvo = document.querySelector('#equipe');
+        alvo.scrollIntoView({behavior:'smooth'});
+    })
 });
