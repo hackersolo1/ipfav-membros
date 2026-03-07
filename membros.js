@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     memberAvatar = '👶';
                 }
 
-                if (member.memberFunction = 'Líder da integração') {
+                if (member.memberFunction == 'Líder da integração') {
                     lucideData = 'user-plus';
                     memberAvatar = '🤝';
                 }
@@ -339,3 +339,4 @@ document.addEventListener('DOMContentLoaded', () => {
         alvo.scrollIntoView({ behavior: 'smooth' });
     })
 });
+
