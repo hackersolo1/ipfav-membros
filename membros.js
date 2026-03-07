@@ -111,8 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let lucideData;
                 let memberAvatar
 
-
-                if (member.memberFunction == 'Pastor') {
+                if (member.memberFunction == 'Pastor' || member.memberFunction == 'Pastora') {
                     lucideData = 'user-check'
                     memberAvatar = '⛪'
                 }
@@ -188,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (member.memberFunction == 'Líder das mulheres') {
-                    lucideData = 'venn-diagram';
+                    lucideData = 'venus';
                     memberAvatar = '👩‍';
                 }
 
@@ -220,6 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (member.memberFunction == 'Líder da integração') {
                     lucideData = 'user-plus';
                     memberAvatar = '🤝';
+                }
+
+                if (member.memberFunction == 'Líder do diácono') {
+                    lucideData = 'hand-helping';
+                    memberAvatar = '🤝';
+                }
+
+                if (member.memberFunction == 'Líder da mídia') {
+                    lucideData = 'camera';
+                    memberAvatar = '📷';
                 }
 
 
@@ -339,4 +348,5 @@ document.addEventListener('DOMContentLoaded', () => {
         alvo.scrollIntoView({ behavior: 'smooth' });
     })
 });
+
 
