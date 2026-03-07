@@ -111,64 +111,115 @@ document.addEventListener('DOMContentLoaded', () => {
                 let lucideData;
                 let memberAvatar
 
+
                 if (member.memberFunction == 'Pastor') {
-                    lucideData = 'UserRoundCheck'
+                    lucideData = 'user-check'
                     memberAvatar = '⛪'
                 }
 
                 if (member.memberFunction == 'Diácono') {
-                    lucideData = 'HandHelping'
+                    lucideData = 'hand-helping'
                     memberAvatar = '🤝'
                 }
 
-                if (member.memberFunction == 'Presbítero') {
-                    lucideData = 'ScrollText'
+                if (member.memberFunction == 'Diácona') {
+                    lucideData = 'hand-helping';
+                    memberAvatar = '🤝';
+                }
+
+                if (member.memberFunction == 'Presbítero' || member.memberFunction == 'Presbítera') {
+                    lucideData = 'award'
                     memberAvatar = '📜'
                 }
 
                 if (member.memberFunction == 'Evangelista') {
-                    lucideData = 'Megaphone'
+                    lucideData = 'megaphone'
                     memberAvatar = '📢'
                 }
 
-                if (member.memberFunction == 'Missionário') {
-                    lucideData = 'MapPin'
+                if (member.memberFunction == 'Missionário' || member.memberFunction == 'Missionária') {
+                    lucideData = 'map-pin'
                     memberAvatar = '🗺️'
                 }
 
-                if (member.memberFunction == 'Cantor') {
-                    lucideData = 'Mic2'
+                if (member.memberFunction == 'Cantor' || member.memberFunction == 'Cantora') {
+                    lucideData = 'mic-2'
                     memberAvatar = '🎤'
                 }
 
-                if (member.memberFunction == 'Músico') {
-                    lucideData = 'MapPin'
+                if (member.memberFunction == 'Músico' || member.memberFunction == 'Música') {
+                    lucideData = 'mic'
                     memberAvatar = '🎵'
                 }
 
                 if (member.memberFunction == 'Instrumentista') {
-                    lucideData = 'Music'
+                    lucideData = 'music'
                     memberAvatar = '🎸'
                 }
 
                 if (member.memberFunction == 'Corista') {
-                    lucideData = 'Users'
+                    lucideData = 'users'
                     memberAvatar = '👥'
                 }
 
                 if (member.memberFunction == 'Líder do coral') {
-                    lucideData = 'Music4'
+                    lucideData = 'mic-2'
                     memberAvatar = '🎼'
                 }
 
-                if (member.memberFunction == 'Líder de Grupo') {
+                if (member.memberFunction == 'Líder de grupo') {
                     lucideData = 'users'
                     memberAvatar = '👥'
                 }
 
                 if (member.memberFunction == 'Mídia') {
-                    lucideData = 'Camera'
+                    lucideData = 'camera'
                     memberAvatar = '📷'
+                }
+
+                if (member.memberFunction == 'Presidente') {
+                    lucideData = 'crown';
+                    memberAvatar = '👑';
+                }
+
+                if (member.memberFunction == 'Vice presidente') {
+                    lucideData = 'user-plus';
+                    memberAvatar = '🥈';
+                }
+
+                if (member.memberFunction == 'Líder das mulheres') {
+                    lucideData = 'venn-diagram';
+                    memberAvatar = '👩‍';
+                }
+
+                if (member.memberFunction == 'Líder dos homens') {
+                    lucideData = 'users';
+                    memberAvatar = '👔';
+                }
+
+                if (member.memberFunction == 'Líder do evangelismo') {
+                    lucideData = 'megaphone';
+                    memberAvatar = '✉️';
+                }
+
+                if (member.memberFunction == 'Líder do louvor') {
+                    lucideData = 'music';
+                    memberAvatar = '💖';
+                }
+
+                if (member.memberFunction == 'Líder ass c') {
+                    lucideData = 'heart-handshake';
+                    memberAvatar = '🎁';
+                }
+
+                if (member.memberFunction == 'Líder do infantil') {
+                    lucideData = 'baby';
+                    memberAvatar = '👶';
+                }
+
+                if (member.memberFunction = 'Líder da integração') {
+                    lucideData = 'user-plus';
+                    memberAvatar = '🤝';
                 }
 
 
@@ -261,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const memberCard = document.querySelectorAll('.team-member');
 
         memberCard.forEach(member => {
-            if(member.textContent.toLowerCase().includes(searchValue.toLowerCase())) {
+            if (member.textContent.toLowerCase().includes(searchValue.toLowerCase())) {
                 member.style.display = 'block';
             } else {
                 member.style.display = 'none';
@@ -280,12 +331,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     postsLink.addEventListener('click', () => {
         const alvo = document.querySelector('#avisos');
-        alvo.scrollIntoView({behavior:'smooth'});
+        alvo.scrollIntoView({ behavior: 'smooth' });
     })
 
     usersLink.addEventListener('click', () => {
         const alvo = document.querySelector('#equipe');
-        alvo.scrollIntoView({behavior:'smooth'});
+        alvo.scrollIntoView({ behavior: 'smooth' });
     })
 });
-
