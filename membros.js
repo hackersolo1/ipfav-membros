@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     memberAvatar = '🎼'
                 }
 
-                if (member.memberFunction == 'Líder de grupo') {
-                    lucideData = 'UserGroup'
+                if (member.memberFunction == 'Líder de Grupo') {
+                    lucideData = 'users'
                     memberAvatar = '👥'
                 }
 
@@ -288,3 +288,4 @@ document.addEventListener('DOMContentLoaded', () => {
         alvo.scrollIntoView({behavior:'smooth'});
     })
 });
+
